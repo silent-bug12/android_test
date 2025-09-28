@@ -84,8 +84,10 @@ text
     </LinearLayout>
 </LinearLayout>
 界面截图
+<img width="1442" height="1003" alt="1" src="https://github.com/user-attachments/assets/1df1c5fa-ea84-4a58-8b5a-496752a95a55" />
 
-二、表格布局页面（TableLayout）
+
+### 二、表格布局页面（TableLayout）
 概述
 TableActivity 使用 TableLayout 模拟菜单界面，体现其在结构化数据展示方面的优势。
 
@@ -130,8 +132,11 @@ xml
     </TableRow>
 </TableLayout>
 界面截图
+<img width="1501" height="1128" alt="2" src="https://github.com/user-attachments/assets/f936d5ce-017d-4e1e-a7fe-fe2a14b2e5fa" />
 
-三、计算器页面（ConstraintLayout + LinearLayout）
+
+
+### 三、计算器页面（ConstraintLayout + LinearLayout）
 概述
 CalculatorActivity 以绿色调为主题，实现一个基础四则运算计算器，展示 ConstraintLayout 与 LinearLayout 混合使用 的灵活性。
 
@@ -177,8 +182,11 @@ xml
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 界面截图
+<img width="1303" height="1027" alt="3" src="https://github.com/user-attachments/assets/b853cebf-3fcd-47cb-b4cf-6c2d8094de23" />
 
-四、太空主题页面（ConstraintLayout）
+
+
+### 四、太空主题页面（ConstraintLayout）
 概述
 ConstraintLayout2Activity 以太空旅行为主题，全面展示 ConstraintLayout 的强大定位能力，适合复杂界面设计。
 
@@ -195,6 +203,9 @@ ConstraintLayout2Activity 以太空旅行为主题，全面展示 ConstraintLayo
 使用 View.GONE / View.VISIBLE 控制元素显示状态
 响应式设计适配不同屏幕尺寸
 界面截图
+<img width="1091" height="952" alt="4" src="https://github.com/user-attachments/assets/ca14abf2-f776-4679-b1b4-b4292b914bc3" />
+
+
 
 布局方式对比分析
 布局类型	优势	局限性	推荐使用场景
