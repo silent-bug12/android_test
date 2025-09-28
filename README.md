@@ -1,13 +1,16 @@
-Android 多种布局方式实践报告
-项目背景
+# Android 多种布局方式实践报告
+
+## 项目背景
+
 在 Android 应用开发中，布局设计是构建用户界面的核心环节。不同的布局容器适用于不同的场景，合理选择布局方式不仅能提升开发效率，还能优化性能与用户体验。
 
-本项目通过构建一个多功能示例应用，系统性地展示了 LinearLayout、TableLayout 和 ConstraintLayout 三种主流布局的实现方式与实际应用效果，旨在为开发者提供直观的对比参考与实践指导。
+本项目通过构建一个多功能示例应用，系统性地展示了 **LinearLayout、TableLayout 和 ConstraintLayout** 三种主流布局的实现方式与实际应用效果，旨在为开发者提供直观的对比参考与实践指导。
 
-项目架构概览
-目录结构
-text
+---
 
+## 项目架构概览
+
+### 目录结构
 app/src/main/
 ├── java/com/backmo/test1/
 │   ├── MainActivity.java
@@ -27,24 +30,35 @@ app/src/main/
 │       ├── rover_icon.png
 │       └── space_station_icon.png
 └── AndroidManifest.xml    # 组件注册与入口配置
-所有 Activity 均在 AndroidManifest.xml 中注册，主页面为 MainActivity。
 
-功能模块详解
-一、主页面：线性布局（LinearLayout）
-概述
-主页面采用 嵌套线性布局（LinearLayout） 实现一个 4×4 的网格界面，展示了线性布局在简单排列中的易用性。
+text
+编辑
 
-界面特征
-黑底白字，高对比度视觉风格
-每个单元格标注其坐标位置（如 "One,One"）
-底部包含跳转至其他功能页面的导航按钮
-技术实现要点
-使用 android:orientation="vertical" 控制整体垂直排列
-内部嵌套 horizontal 方向的 LinearLayout 实现行级布局
-通过 layout_width="0dp" 配合 layout_weight="1" 实现等宽分布
-设置 layout_margin 提供视觉间距，避免元素粘连
-核心布局代码（节选）
-xml
+> 所有 Activity 均在 `AndroidManifest.xml` 中注册，主页面为 `MainActivity`。
+
+---
+
+## 功能模块详解
+
+### 一、主页面：线性布局（LinearLayout）
+
+#### 概述
+主页面采用 **嵌套线性布局（LinearLayout）** 实现一个 4×4 的网格界面，展示了线性布局在简单排列中的易用性。
+
+#### 界面特征
+- 黑底白字，高对比度视觉风格
+- 每个单元格标注其坐标位置（如 "One,One"）
+- 底部包含跳转至其他功能页面的导航按钮
+
+#### 技术实现要点
+- 使用 `android:orientation="vertical"` 控制整体垂直排列
+- 内部嵌套 `horizontal` 方向的 LinearLayout 实现行级布局
+- 通过 `layout_width="0dp"` 配合 `layout_weight="1"` 实现等宽分布
+- 设置 `layout_margin` 提供视觉间距，避免元素粘连
+
+#### 核心布局代码（节选）
+
+```xml
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -68,6 +82,12 @@ xml
             android:text="One,One" />
     </LinearLayout>
 </LinearLayout>
+界面截图
+<img width="721" height="502" alt="2-2" src="https://github.com/user-attachments/assets/0c71eaaf-ef99-499f-8ee0-212e462a21f4" />
+
+
+
+
 
 二、表格布局页面（TableLayout）
 概述
@@ -83,11 +103,9 @@ TableActivity 使用 TableLayout 模拟菜单界面，体现其在结构化数�
 通过 android:background 设置不同层级的背景色（标题、菜单项）
 利用 layout_weight 实现第一列文本拉伸，第二列紧凑显示快捷键
 所有点击事件通过 setOnClickListener 统一处理
-核心布局代码
+核心布局代码（节选）
 xml
-界面截图
-<img width="721" height="502" alt="2-2" src="https://github.com/user-attachments/assets/77dd41ee-eab9-4341-9491-d28d726b774f" />
-
+编辑
 <TableLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -116,7 +134,11 @@ xml
     </TableRow>
 </TableLayout>
 界面截图
-<img width="751" height="564" alt="2-1" src="https://github.com/user-attachments/assets/1750ae29-2dbb-4d57-a8e7-ef04ecf357bd" />
+<img width="751" height="564" alt="2-1" src="https://github.com/user-attachments/assets/dccce0b0-2e96-4182-af52-858e5efbbb1b" />
+
+
+
+
 
 三、计算器页面（ConstraintLayout + LinearLayout）
 概述
@@ -135,7 +157,7 @@ CalculatorActivity 以绿色调为主题，实现一个基础四则运算计算�
 逻辑部分处理运算优先级与结果更新
 核心布局代码（节选）
 xml
-
+编辑
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -164,7 +186,10 @@ xml
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 界面截图
-<img width="652" height="514" alt="2-3" src="https://github.com/user-attachments/assets/143da9eb-7d6c-425b-8e79-b4982f99e71f" />
+<img width="652" height="514" alt="2-3" src="https://github.com/user-attachments/assets/f1f6d4f2-0b5c-432c-8dff-d087e8301630" />
+
+
+
 
 
 四、太空主题页面（ConstraintLayout）
@@ -184,7 +209,11 @@ ConstraintLayout2Activity 以太空旅行为主题，全面展示 ConstraintLayo
 使用 View.GONE / View.VISIBLE 控制元素显示状态
 响应式设计适配不同屏幕尺寸
 界面截图
-<img width="545" height="476" alt="2-4" src="https://github.com/user-attachments/assets/53448273-799e-4561-bee3-5664f381d329" />
+<img width="545" height="476" alt="2-4" src="https://github.com/user-attachments/assets/12e3080c-3c07-4763-a487-160d55e78b84" />
+
+
+
+
 
 布局方式对比分析
 布局类型	优势	局限性	推荐使用场景
@@ -229,4 +258,4 @@ galaxy.png	太空背景图	ConstraintLayout2 页面背景
 总结
 本项目通过四个典型页面，系统性地实践了 Android 开发中常用的三种布局方式。从线性布局的简洁，到表格布局的规整，再到约束布局的灵活，完整展示了不同场景下的最佳实践。
 
-项目不仅实现了基础功能，还融入了图标资源、主题设计、交互反馈等实用技巧，具备良好的教学价值与参考意义。对于初学者而言，是理解 Android UI 构建机制的优秀范例；对于进阶开发者，也提供了布局选型与优化的思考方向
+项目不仅实现了基础功能，还融入了图标资源、主题设计、交互反馈等实用技巧，具备良好的教学价值与参考意义。对于初学者而言，是理解 Android UI 构建机制的优秀范例；对于进阶开发者，也提供了布局选型与优化的思考方向。
