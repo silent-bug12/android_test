@@ -83,14 +83,8 @@ text
     </LinearLayout>
 </LinearLayout>
 界面截图
-<img width="1442" height="1003" alt="屏幕截图 2025-09-28 163332" src="https://github.com/user-attachments/assets/e9cfec30-1ae4-4ea0-86fa-f177e1234ad0" />
 
-
-
-
-
-
-### 二、表格布局页面（TableLayout）
+二、表格布局页面（TableLayout）
 概述
 TableActivity 使用 TableLayout 模拟菜单界面，体现其在结构化数据展示方面的优势。
 
@@ -135,14 +129,8 @@ xml
     </TableRow>
 </TableLayout>
 界面截图
-<img width="1501" height="1128" alt="屏幕截图 2025-09-28 163315" src="https://github.com/user-attachments/assets/c66f0ad5-806b-4333-80dc-972f9e9bd2b6" />
 
-
-
-
-
-
-### 三、计算器页面（ConstraintLayout + LinearLayout）
+三、计算器页面（ConstraintLayout + LinearLayout）
 概述
 CalculatorActivity 以绿色调为主题，实现一个基础四则运算计算器，展示 ConstraintLayout 与 LinearLayout 混合使用 的灵活性。
 
@@ -188,15 +176,8 @@ xml
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
 界面截图
-<img width="1303" height="1027" alt="屏幕截图 2025-09-28 163349" src="https://github.com/user-attachments/assets/136a0e25-8006-4fea-b4a9-0195a0f2b1e6" />
 
-
-
-
-
-
-
-### 四、太空主题页面（ConstraintLayout）
+四、太空主题页面（ConstraintLayout）
 概述
 ConstraintLayout2Activity 以太空旅行为主题，全面展示 ConstraintLayout 的强大定位能力，适合复杂界面设计。
 
@@ -213,19 +194,13 @@ ConstraintLayout2Activity 以太空旅行为主题，全面展示 ConstraintLayo
 使用 View.GONE / View.VISIBLE 控制元素显示状态
 响应式设计适配不同屏幕尺寸
 界面截图
-<img width="1091" height="952" alt="屏幕截图 2025-09-28 163413" src="https://github.com/user-attachments/assets/43667fa6-d164-43cb-b672-dd222818e55c" />
-
-
-
-
-
 
 布局方式对比分析
 布局类型	优势	局限性	推荐使用场景
 LinearLayout	结构简单，学习成本低，性能优秀	嵌套过深影响性能，灵活性差	简单列表、线性排列
 TableLayout	表格结构清晰，适合数据对齐	不支持复杂定位，扩展性弱	菜单、表单、表格数据
 ConstraintLayout	高度灵活，扁平化结构，性能佳	学习曲线较陡，XML 较复杂	复杂 UI、响应式布局
-推荐策略：优先使用 ConstraintLayout，简单场景可用 LinearLayout，表格类使用 TableLayout。
+ 推荐策略：优先使用 ConstraintLayout，简单场景可用 LinearLayout，表格类使用 TableLayout。
 
 资源文件说明
 图标资源（drawable）
@@ -263,4 +238,4 @@ galaxy.png	太空背景图	ConstraintLayout2 页面背景
 总结
 本项目通过四个典型页面，系统性地实践了 Android 开发中常用的三种布局方式。从线性布局的简洁，到表格布局的规整，再到约束布局的灵活，完整展示了不同场景下的最佳实践。
 
-项目不仅实现了基础功能，还融入了图标资源、主题设计、交互反馈等实用技巧，具备良好的教学价值与参考意义。对于初学者而言，是理解 Android UI 构建机制的优秀范例；对于进阶开发者，也提供了布局选型与优化的思考方向。
+项目不仅实现了基础功能，还融入了图标资源、主题设计、交互反馈等实用技巧，具备良好的教学价值与参考意义。对于初学者而言，是理解 Android UI 构建机制的优秀范例；对于进阶开发者，也提供了布局选型与优化的思考方向
